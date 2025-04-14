@@ -1,0 +1,27 @@
+---
+title: News
+---
+
+## News/change logs 
+
+```{r news-source-pull}
+news_link <- rev(list.files(here::here("content/intro-news/"), full.names = TRUE))
+news_link1 <- rev(list.files(here::here("content/intro-news/"), full.names = FALSE))
+news_name <- c()
+news_desc <- c()
+for (i in 1:length(news_link)) {
+  a <- readLines(con = news_link[i])
+  news_name <- c(news_name, a[1])
+  news_desc <- c(news_desc, a[2])
+}
+str0 <- paste0(paste0(" -- [",
+                      news_name,
+                      "](",
+                      "https://raw.githubusercontent.com/IEA-Data/IEA_Data_Guidance_Doc/main/content/intro-news/",
+                      news_link1, # recalling function so it prints relative directory during quarto render (I hope)
+                      "): ", 
+                      news_desc ), collapse = "\n\n")
+```
+
+`r str0`
+

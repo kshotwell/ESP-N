@@ -1,0 +1,27 @@
+---
+title: "Contact us"
+---
+
+Thank you for using our data guide! 
+
+```{r setup, include=FALSE}
+#| file: functions.R
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+> This code is always in development. Find code used for various reports in the code [releases](`r paste0(link_repo, "/releases")`).
+
+## This code is primarally maintained by:
+
+**Emily Markowitz** (Emily.Markowitz AT noaa.gov; [\@EmilyMarkowitz-NOAA](https://github.com/EmilyMarkowitz-NOAA)) 
+
+Alaska Fisheries Science Center,
+
+National Marine Fisheries Service,
+
+National Oceanic and Atmospheric Administration,
+
+Seattle, WA 98195
+
+**General questions and more specific data requests** can be sent to...

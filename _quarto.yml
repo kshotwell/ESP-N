@@ -1,0 +1,101 @@
+project: 
+  type: book
+  output-dir: docs
+  pre-render: content/functions.R
+
+book: 
+  page-navigation: true
+  title: "Integrated Ecosystem Assessment Data Guidance Documentation" 
+  site-url: "https://www.integratedecosystemassessment.noaa.gov/" 
+  repo-url: "https://github.com/IEA-Data/IEA_Data_Guidance_Doc"
+  repo-actions: [edit, source, issue]
+  favicon: img/favicon.png
+  downloads: [pdf, docx]
+  search: true
+  author:
+    - name: Integrated Ecosystem Assessment
+      email: [enter]
+      note: https://www.integratedecosystemassessment.noaa.gov/
+      affiliations:
+        - name: [enter]
+          department: [enter]
+  chapters:
+    - part: index.qmd
+      chapters:
+        - content/intro-workflow.qmd
+        - content/intro-news.qmd
+        - content/intro-code-of-conduct.qmd
+        - content/intro-how-to-contribute.qmd
+    - part: content/products-intro.qmd
+      chapters:
+        - content/products-esr.qmd
+    - part: content/other-intro.qmd
+      chapters:
+        - content/other-pkgs.qmd
+    - part: content/end-contact-us.qmd 
+      chapters:
+        - content/end-run-notes.qmd
+        - content/end-acknowledgements.qmd
+        - content/end-refs.qmd
+        
+  page-footer:
+    right: "[U.S. Department of Commerce](https://www.commerce.gov/) | [National Oceanographic and Atmospheric Administration](https://www.noaa.gov) | [NOAA Fisheries](https://www.fisheries.noaa.gov/)" 
+    left: "&copy; CC-1.0"
+  
+  sidebar:
+    background: "#D9E3E4"
+    logo: "https://avatars.githubusercontent.com/u/186961204?s=200&v=4"
+    favicon: img/favicon.ico
+    pinned: true
+    align: center
+    tools: 
+      - icon: globe
+        href: https://github.com/IEA-Data
+        text: "NOAA Integrated Ecosystem Assessments"
+    style: "docked"
+    search: true
+    collapse-level: 2
+
+bibliography: [content/references.bib]
+csl: content/references.csl
+# csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa-no-ampersand.csl
+# bibliography: https://raw.githubusercontent.com/IEA-Data/citations/main/cite/bibliography.bib
+
+execute:
+  echo: false
+  # eval: true
+  error: false
+  message: false
+  comment: false
+  warning: false
+  code-overflow: wrap
+  freeze: auto
+
+format:
+  titlepage-pdf:
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    titlepage: "plain"
+    keep-tex: true
+    latex_engine: xelatex
+    pandoc_args: "--latex-engine-opt=--enable-write18"
+  docx:
+    toc: true
+    toc-depth: 2
+    reference-doc: template.docx
+    always_allow_html: true
+  html:
+    theme: [cosmo, assets/theme.scss] 
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    include-before-body: translate.html    
+
+filters:
+  - assets/include-files.lua
+  - quarto
+
+# Comment next 2 lines if the PDF is having trouble
+metadata-files:
+  - _frontmatter.yml
+  - quarto 

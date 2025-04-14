@@ -1,0 +1,15 @@
+{
+  "hash": "3d599c3f714c992e982da1bc2cb624f9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: News\n---\n\n\n## News/change logs \n\n\n::: {.cell}\n\n:::\n\n\n -- [Run 2025-04-02 Initial Run](https://raw.githubusercontent.com/IEA-Data/IEA_Data_Guidance_Doc/main/content/intro-news/2025-04-02.txt): Initial compiling and planning notes\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

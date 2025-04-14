@@ -4,7 +4,6 @@
 
 # Session Data files
 .RData
-.RDataTmp
 
 # User-specific files
 .Ruserdata
@@ -39,11 +38,19 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
+/notforgit/
 
-# translation temp files
-po/*~
+# Temporary Files
+temp/
 
-# RStudio Connect folder
-rsconnect/
+/.quarto/
+
+.DS_Store
+
+# Modsquad bridging RDS objects
+code/modsquad_bridge/**/*.RDS
+
+output/
+temp/
+data/
+content/*.csv

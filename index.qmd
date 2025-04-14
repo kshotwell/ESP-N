@@ -1,0 +1,56 @@
+---
+title: Welcome
+---
+
+```{r setup, include=FALSE}
+#| file: content/functions.R # must specify because *this* .qmd in different folder
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, error = FALSE, message = FALSE)
+```
+
+> Report run date: `r format(Sys.Date(), format = "%A, %B %d, %Y")`
+
+## Integrated Ecosystem Assesments
+
+[description]
+
+![Sorting and weighing fish on deck on the 2022 Bering Sea groundfish survey aboard the F/V Alaska Knight. Credit: Emily Markowitz/NOAA Fisheries.](https://www.fisheries.noaa.gov/s3/2023-04/750x500-bottom-trawl-survey-afsc.jpg)
+
+## Documentation Objective
+
+As part of our commitment to open science, reproducibility, and transparency, we provide this  metadata guide to compliment our public-domain data. 
+
+> Please consider this resource to be a **Living Document**. The code in this repository is regularly being updated and improved. Please refer to [releases](`r paste0(link_repo, '/releases')`) for finalized products and project milestones.
+
+> Do not hesitate to reach out (to us at either [email] or [GitHub issues](`r paste0(link_repo, "/issues")`), especially if you find discrepancies in the data or want to suggest improvements to infrastructure. Thank you in advance for your collaboration and partnership with us as we develop our future data universe.
+
+## User Resources
+
+-   [IEA Ecosystem Status Reports](https://www.integratedecosystemassessment.noaa.gov/ecosystem-status-reports)
+
+## Cite this data
+
+Use the below [bibtext citations](`r paste0(link_repo, "/blob/main/CITATION.bib")`), as cited in our group's [citation repository](https://github.com/IEA-Data/citations/blob/main/cite/bibliography.bib) for citing the data created and maintained in this repo. Add "note = {Accessed: mm/dd/yyyy}" to append the day this data was accessed. Included here are AFSC RACE Groundfish and Shellfish Assessment Program's: 
+
+```{r load_citation, echo = FALSE}
+cat(readLines(con = here::here("CITATION.bib")), sep = "\n") 
+```
+
+## Access Constraints
+
+There are no legal restrictions on access to the data. They reside in public domain and can be freely distributed.
+
+**User Constraints:** Users must read and fully comprehend the metadata and [code of conduct](https://IEA-Data.io/IEA_Data_Guidance_Doc/content/code-of-conduct.html) prior to use. Data should not be used beyond the limits of the source scale. Acknowledgement of the Program, as the source from which these data were obtained, in any publications and/or other representations of these data, is suggested.
+
+## Suggestions and comments
+
+If the data or metadata can be improved, please create a pull request or [submit an issue to the code's repository](`r paste0(link_repo, "/issues")`).
+
+## NOAA README
+
+This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
+
+## NOAA License
+
+Software code created by U.S. Government employees is not subject to copyright in the United States (17 U.S.C. §105). The United States/Department of Commerce reserve all rights to seek and obtain copyright protection in countries other than the United States for Software authored in its entirety by the Department of Commerce. To this end, the Department of Commerce hereby grants to Recipient a royalty-free, nonexclusive license to use, copy, and create derivative works of the Software outside of the United States.
+
