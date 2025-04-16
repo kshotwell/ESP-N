@@ -1,12 +1,12 @@
-project: 
+project:
   type: book
   output-dir: docs
   pre-render: content/functions.R
 
-book: 
+book:
   page-navigation: true
-  title: "Integrated Ecosystem Assessment Data Guidance Documentation" 
-  site-url: "https://www.integratedecosystemassessment.noaa.gov/" 
+  title: "Ecosystem and Socioeconomic Profile Network"
+  site-url: "https://www.integratedecosystemassessment.noaa.gov/"
   repo-url: "https://github.com/IEA-Data/IEA_Data_Guidance_Doc"
   repo-actions: [edit, source, issue]
   favicon: img/favicon.png
@@ -22,33 +22,33 @@ book:
   chapters:
     - part: index.qmd
       chapters:
-        - content/intro-workflow.qmd
+        # - content/intro-workflow.qmd
         - content/intro-news.qmd
         - content/intro-code-of-conduct.qmd
         - content/intro-how-to-contribute.qmd
     - part: content/products-intro.qmd
       chapters:
         - content/products-esr.qmd
-    - part: content/other-intro.qmd
-      chapters:
-        - content/other-pkgs.qmd
-    - part: content/end-contact-us.qmd 
+    # - part: content/other-intro.qmd
+    #   chapters:
+    #     - content/other-pkgs.qmd
+    - part: content/end-contact-us.qmd
       chapters:
         - content/end-run-notes.qmd
         - content/end-acknowledgements.qmd
         - content/end-refs.qmd
-        
+
   page-footer:
-    right: "[U.S. Department of Commerce](https://www.commerce.gov/) | [National Oceanographic and Atmospheric Administration](https://www.noaa.gov) | [NOAA Fisheries](https://www.fisheries.noaa.gov/)" 
+    right: "[U.S. Department of Commerce](https://www.commerce.gov/) | [National Oceanographic and Atmospheric Administration](https://www.noaa.gov) | [NOAA Fisheries](https://www.fisheries.noaa.gov/)"
     left: "&copy; CC-1.0"
-  
+
   sidebar:
     background: "#D9E3E4"
     logo: "https://avatars.githubusercontent.com/u/186961204?s=200&v=4"
     favicon: img/favicon.ico
     pinned: true
     align: center
-    tools: 
+    tools:
       - icon: globe
         href: https://github.com/IEA-Data
         text: "NOAA Integrated Ecosystem Assessments"
@@ -85,11 +85,11 @@ format:
     reference-doc: template.docx
     always_allow_html: true
   html:
-    theme: [cosmo, assets/theme.scss] 
+    theme: [cosmo, assets/theme.scss]
     toc: true
     toc-depth: 3
     number-sections: false
-    include-before-body: translate.html    
+    include-before-body: translate.html
 
 filters:
   - assets/include-files.lua
@@ -98,4 +98,4 @@ filters:
 # Comment next 2 lines if the PDF is having trouble
 metadata-files:
   - _frontmatter.yml
-  - quarto 
+  - quarto
